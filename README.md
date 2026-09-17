@@ -11,7 +11,7 @@
 En este trabajo hice un paquete de ROS 2 para controlar un robot en el
 simulador Stage.
 
-[La letra del ejercicio está en este PDF](./Descripcion%20Ejercicio%20Proyecto%20de%20Robot%20II.docx.pdf).
+[La letra del ejercicio está en este PDF](https://github.com/mathira/autonomous_navigation_pria/blob/main/Descripcion%20Ejercicio%20Proyecto%20de%20Robot%20II.docx.pdf).
 
 El robot recibe su posición y la información del sensor láser. Con esos datos
 se mueve solo hacia el objetivo, evita obstáculos y publica sus velocidades.
