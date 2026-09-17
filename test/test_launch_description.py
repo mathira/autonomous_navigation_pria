@@ -12,6 +12,7 @@ from autonomous_navigation_pria.control import NavigationConfig
 
 LAUNCH_FILE = (
     Path(__file__).parents[1]
+    / "src"
     / "autonomous_navigation_pria"
     / "launch"
     / "pid_navigation.launch.py"
