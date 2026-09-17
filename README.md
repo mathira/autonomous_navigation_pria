@@ -64,3 +64,7 @@ ros2 launch autonomous_navigation_pria autonomous_navigation.launch.py
 - Evita los obstáculos del mapa.
 - Llega al objetivo y se detiene.
 - El código está organizado en un paquete ROS 2.
+
+## Video demo
+
+https://youtu.be/nwzJDvedRPE
