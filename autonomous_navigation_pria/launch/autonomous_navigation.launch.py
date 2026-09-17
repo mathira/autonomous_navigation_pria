@@ -73,8 +73,8 @@ def generate_launch_description():
     }
     navigator = Node(
         package="autonomous_navigation_pria",
-        executable="pid_navigator",
-        name="pid_navigator",
+        executable="autonomous_navigation_pria",
+        name="autonomous_navigation_pria",
         output="screen",
         parameters=[parameters],
     )

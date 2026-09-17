@@ -48,7 +48,7 @@ Después, en otra terminal, arranco solamente la navegación:
 cd /ros2_ws
 source /opt/ros/jazzy/setup.bash
 source /ros2_ws/install/setup.bash
-ros2 launch autonomous_navigation_pria pid_navigation.launch.py
+ros2 launch autonomous_navigation_pria autonomous_navigation.launch.py
 ```
 
 ## Tópicos principales

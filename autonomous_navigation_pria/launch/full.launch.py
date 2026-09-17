@@ -34,7 +34,7 @@ def generate_launch_description():
     navigation_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution(
-                [FindPackageShare("autonomous_navigation_pria"), "launch", "pid_navigation.launch.py"]
+                [FindPackageShare("autonomous_navigation_pria"), "launch", "autonomous_navigation.launch.py"]
             )
         ),
         launch_arguments={
@@ -49,7 +49,7 @@ def generate_launch_description():
             "bash",
             "-lc",
             "pkill -f '[s]tage_world.launch.py' || true; "
-            "pkill -f '[p]id_navigator' || true; "
+            "pkill -x autonomous_navigation_pria || true; "
             "if [ \"$1\" = \"false\" ]; then "
             "pkill -x stage || true; pkill -f '[s]tage_ros2' || true; fi",
             "cleanup",

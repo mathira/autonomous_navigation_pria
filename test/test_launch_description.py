@@ -14,7 +14,7 @@ LAUNCH_FILE = (
     Path(__file__).parents[1]
     / "autonomous_navigation_pria"
     / "launch"
-    / "pid_navigation.launch.py"
+    / "autonomous_navigation.launch.py"
 )
 
 EXPECTED_DEFAULTS = {
@@ -64,7 +64,7 @@ FLOAT_PARAMETERS = {
 
 
 def load_launch_description():
-    spec = spec_from_file_location("pid_navigation_launch", LAUNCH_FILE)
+    spec = spec_from_file_location("autonomous_navigation_launch", LAUNCH_FILE)
     module = module_from_spec(spec)
     spec.loader.exec_module(module)
     return module.generate_launch_description()
@@ -92,7 +92,7 @@ def test_launch_declares_stage_topics_and_goal_arguments():
     node = next(action for action in description.entities if isinstance(action, Node))
     node_fields = vars(node)
     assert node_fields["_Node__package"] == "autonomous_navigation_pria"
-    assert node_fields["_Node__node_executable"] == "pid_navigator"
+    assert node_fields["_Node__node_executable"] == "autonomous_navigation_pria"
     parameters = navigator_parameters(description)[0]
     assert {key[0].text for key in parameters} == set(arguments)
 

@@ -26,7 +26,7 @@ def test_signal_publishes_final_stop_before_ros_context_shutdown(shutdown_signal
     suffix = uuid.uuid4().hex
     command_topic = f"/pid_lifecycle_{suffix}/cmd_vel"
     odom_topic = f"/pid_lifecycle_{suffix}/odom"
-    code = "from autonomous_navigation_pria.pid_navigator import main; main()"
+    code = "from autonomous_navigation_pria.navigation_node import main; main()"
     process = subprocess.Popen(
         [
             sys.executable,

@@ -31,7 +31,7 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "pid_navigator = autonomous_navigation_pria.pid_navigator:main",
+            "autonomous_navigation_pria = autonomous_navigation_pria.navigation_node:main",
         ],
     },
 )

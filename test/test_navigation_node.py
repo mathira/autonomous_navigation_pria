@@ -150,7 +150,7 @@ def _load_adapter_with_fake_ros():
     }
     sys.modules.update(replacements)
     try:
-        return importlib.import_module("autonomous_navigation_pria.pid_navigator")
+        return importlib.import_module("autonomous_navigation_pria.navigation_node")
     finally:
         for name, original in saved_modules.items():
             if original is None:

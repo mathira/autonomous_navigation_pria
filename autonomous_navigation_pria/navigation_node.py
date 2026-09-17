@@ -66,7 +66,7 @@ class PidNavigator(Node):
     """Connect odometry and laser scans to velocity commands."""
 
     def __init__(self):
-        super().__init__("pid_navigator")
+        super().__init__("autonomous_navigation_pria")
         parameters = {
             name: self.declare_parameter(name, default).value
             for name, default in PARAMETER_DEFAULTS.items()

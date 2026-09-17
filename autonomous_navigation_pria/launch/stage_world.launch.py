@@ -21,7 +21,7 @@ def generate_launch_description():
             "bash",
             "-lc",
             "pkill -f '[f]ull.launch.py' || true; "
-            "pkill -f '[p]id_navigator' || true; "
+            "pkill -x autonomous_navigation_pria || true; "
             "pkill -x stage || true; pkill -f '[s]tage_ros2' || true",
         ],
         output="screen",
